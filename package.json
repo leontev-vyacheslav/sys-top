@@ -14,7 +14,9 @@
         "nodemon": "^2.0.4"
     },
     "dependencies": {
+        "datejs": "^1.0.0-rc3",
         "devextreme": "^20.1.4",
+        "electron-log": "^4.2.1",
         "node-os-utils": "^1.2.2"
     }
 }

@@ -102,8 +102,8 @@
                     <div data-core-cpu-free-progress-bar></div>
                 </div>
 
-                <div class="core-progress" class="core-flex-row">
-                    <div data-core-cpu-progress></div>
+                <div class="core-progress" class="core-flex-row" style="padding-top: 20px;">
+                    <div data-core-cpu-progress style="width: 100%;"></div>
                 </div>
             </div>
 
@@ -121,6 +121,10 @@
                 <div class="core-flex-row" style="padding: 0; justify-content: flex-start;">
                     <p data-core-mem class="dx-theme-material-typography dx-theme-accent-as-text-color"></p>
                 </div>
+
+                <div class="core-flex-row" style="padding: 0; justify-content: flex-start;">
+                    <p data-core-uptime class="dx-theme-material-typography dx-theme-accent-as-text-color"></p>
+                </div>
             </div>
                             
             <div data-core-tab-settings style="display: none">
@@ -136,8 +140,8 @@
 </body>
 
 <script>
-    require('../node_modules/devextreme/dist/js/dx.all.js');   
-    
+    require('../node_modules/devextreme/dist/js/dx.all.js');  
+        
     window.onload = async (e) =>
     {
         const MainWindow = require('./index.js');

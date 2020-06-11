@@ -1,7 +1,12 @@
 const { app, BrowserWindow, ipcMain  } = require('electron');
-
+const log = require('electron-log');
 
 let mainWindow = null;
+
+ipcMain.on('settings:request', () =>
+{
+    mainWindow.webContents.send('settings:response', {cpuOverloading: 20});
+});
 
 const createMainWindow = () =>
 {
@@ -24,9 +29,11 @@ const createMainWindow = () =>
 app.whenReady().then( () =>
 {
     createMainWindow();
-        
+
+    
     mainWindow.once('ready-to-show', () =>
-    {                
-        mainWindow.show();
-    })
+    {      
+        log.log('ready-to-show');             
+        mainWindow.show();              
+    });    
 });
