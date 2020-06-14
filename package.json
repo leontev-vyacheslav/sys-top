@@ -4,13 +4,32 @@
         "name": "Leo",
         "email": "eta.development.leo@outlook.com"
     },
+    "version": "1.0.0",
+    "description": "It is the most powerful and useful program for computer system observing by the greatest programmer in the whole world among of all times and nations :)",
+    "build": {
+        "appId": "sys-top",
+        "win": {
+            "icon": "assets/icons/win/icon.ico"
+        },
+        "nsis":
+        {
+            "displayLanguageSelector": true
+        }
+    },
+    
     "main": "main.js",
     "icon": "./assets/icons/win/icon.ico",
     "scripts": {
-        "dev": "nodemon --exec electron ."
+        "dev": "nodemon --exec electron .",
+        "builder-dist": "electron-builder",
+        "packager-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
+        "packager-win": "electron-packager . sys-top --overwrite --platform=win32 --arch=x64 --icon=assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"SysTop App\"",
+        "packager-linux": "electron-packager . sys-top --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/png/1024x1024.png --prune=true --out=release-builds"
     },
     "devDependencies": {
         "electron": "^9.0.3",
+        "electron-builder": "^22.7.0",
+        "electron-packager": "^14.2.1",
         "nodemon": "^2.0.4"
     },
     "dependencies": {
