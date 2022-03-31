@@ -1,84 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SysTop</title>        
-    <link rel="stylesheet" type="text/css" href="./node_modules/devextreme/dist/css/dx.common.css"></link>
+    <title>SysTop</title>
+    <link rel="stylesheet" type="text/css" href="./node_modules/devextreme/dist/css/dx.common.css">
+    </link>
 
-    <link rel="dx-theme" data-theme="material.teal.dark" href="./node_modules/devextreme/dist/css/dx.material.teal.dark.css" data-active="false"></link>
-    <link rel="dx-theme" data-theme="material.teal.light" href="./node_modules/devextreme/dist/css/dx.material.teal.light.css" data-active="false"></link>
-    <link rel="dx-theme" data-theme="material.orange.dark" href="./node_modules/devextreme/dist/css/dx.material.orange.dark.css" data-active="false"></link>
-    <link rel="dx-theme" data-theme="material.orange.light" href="./node_modules/devextreme/dist/css/dx.material.orange.light.css" data-active="false"></link>
+    <link rel="dx-theme" data-theme="material.teal.dark"
+        href="./node_modules/devextreme/dist/css/dx.material.teal.dark.css" data-active="false">
+    </link>
+    <link rel="dx-theme" data-theme="material.teal.light"
+        href="./node_modules/devextreme/dist/css/dx.material.teal.light.css" data-active="false">
+    </link>
+    <link rel="dx-theme" data-theme="material.orange.dark"
+        href="./node_modules/devextreme/dist/css/dx.material.orange.dark.css" data-active="false">
+    </link>
+    <link rel="dx-theme" data-theme="material.orange.light"
+        href="./node_modules/devextreme/dist/css/dx.material.orange.light.css" data-active="false">
+    </link>
 </head>
 
 <style>
     body {
-        -webkit-user-select: none;        
+        -webkit-user-select: none;
         overflow: hidden;
     }
+
     .core-flex-row {
         display: flex;
-        flex-direction: row; 
-        align-items: center; 
-        justify-content: center; 
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
         padding-bottom: 20px;
     }
-    .dx-button-text
-    {
+
+    .dx-button-text {
         letter-spacing: 1px;
     }
+
     .dx-menu .dx-menu-item-has-icon.dx-menu-item-has-submenu .dx-icon {
         margin: 0 5px 0 3px;
-    }    
-    .dx-color-scheme-teal-dark [data-core-close-menu] .dx-state-hover, 
-    .dx-color-scheme-teal-light [data-core-close-menu] .dx-state-hover{
+    }
+
+    .dx-color-scheme-teal-dark [data-core-close-menu] .dx-state-hover,
+    .dx-color-scheme-teal-light [data-core-close-menu] .dx-state-hover {
         background-color: teal;
         color: white;
     }
-    .dx-color-scheme-orange-dark [data-core-close-menu] .dx-state-hover, 
-    .dx-color-scheme-orange-light [data-core-close-menu] .dx-state-hover{
+
+    .dx-color-scheme-orange-dark [data-core-close-menu] .dx-state-hover,
+    .dx-color-scheme-orange-light [data-core-close-menu] .dx-state-hover {
         background-color: orangered;
         color: white;
     }
 
     .dx-tabpanel .dx-tab {
-       min-width: 150px;       
+        min-width: 150px;
     }
-    .dx-tab-text
-    {
+
+    .dx-tab-text {
         display: flex;
     }
+
     .dx-tab-text i {
         margin-right: 8px !important;
     }
-    .core-tab-flex-row{
+
+    .core-tab-flex-row {
         justify-content: flex-start;
     }
-    [data-core-tabs] .dx-icon
-    {
+
+    [data-core-tabs] .dx-icon {
         margin-right: 10px;
     }
-    .core-tab-panel{        
+
+    .core-tab-panel {
         position: fixed;
         bottom: 0;
         left: 0;
         width: 100%;
     }
-    .core-window-draggable-title
-    {
-        flex: 1; 
+
+    .core-window-draggable-title {
+        flex: 1;
         -webkit-app-region: drag;
-         width: 100%;
-          align-self: center; 
-          text-align: center;
-          vertical-align: middle;
-          font-size: 16px; 
-          letter-spacing: 8px;
-          text-transform: uppercase;
+        width: 100%;
+        align-self: center;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 16px;
+        letter-spacing: 8px;
+        text-transform: uppercase;
     }
-    .core-progress-bar .dx-progressbar-container
-    {
+
+    .core-progress-bar .dx-progressbar-container {
         height: 25px;
     }
 </style>
@@ -86,25 +103,25 @@
 <body class="dx-viewport">
 
     <div data-core-window-row>
-        <div class="core-flex-row " style="align-items: stretch;" >            
+        <div class="core-flex-row " style="align-items: stretch;">
             <div data-core-main-menu></div>
-            <div class="core-window-draggable-title">                
-                <span class="dx-theme-material-typography">                
+            <div class="core-window-draggable-title">
+                <span class="dx-theme-material-typography">
                     SysTop
                 </span>
-            </div>    
+            </div>
             <div data-core-close-menu></div>
         </div>
-    </div> 
-    
+    </div>
+
     <div data-core-main-container style="padding: 10px;">
-                        
+
         <div data-core-tabs>
             <div data-core-tab-cpu>
-                <div class="core-flex-row core-tab-flex-row" style="padding: 0;">                
+                <div class="core-flex-row core-tab-flex-row" style="padding: 0;">
                     <i class="dx-icon dx-icon-smalliconslayout dx-theme-accent-as-text-color"></i>
                     <p class="dx-theme-material-typography dx-theme-accent-as-text-color">CPU</p>
-                </div>    
+                </div>
                 <div class="core-flex-row" style="padding: 0; justify-content: flex-start;">
                     <p data-core-model class="dx-theme-material-typography dx-theme-accent-as-text-color"></p>
                 </div>
@@ -121,10 +138,10 @@
             </div>
 
             <div data-core-tab-system-info style="display: none">
-                <div class="core-flex-row core-tab-flex-row" style="padding: 0;">                
+                <div class="core-flex-row core-tab-flex-row" style="padding: 0;">
                     <i class="dx-icon dx-icon-info dx-theme-accent-as-text-color"></i>
                     <p class="dx-theme-material-typography dx-theme-accent-as-text-color">SYSTEM INFO</p>
-                </div> 
+                </div>
                 <div class="core-flex-row" style="padding: 0; justify-content: flex-start;">
                     <p data-core-host class="dx-theme-material-typography dx-theme-accent-as-text-color"></p>
                 </div>
@@ -139,12 +156,12 @@
                     <p data-core-uptime class="dx-theme-material-typography dx-theme-accent-as-text-color"></p>
                 </div>
             </div>
-                            
+
             <div data-core-tab-settings style="display: none">
-                <div class="core-flex-row core-tab-flex-row">                
+                <div class="core-flex-row core-tab-flex-row">
                     <i class="dx-icon dx-icon-preferences dx-theme-accent-as-text-color"></i>
                     <p class="dx-theme-material-typography dx-theme-accent-as-text-color">SETTINGS</p>
-                </div> 
+                </div>
                 <div data-core-settings>
                     <div data-core-cpu-loading></div>
                     <div data-core-cpu-alert-interval></div>
@@ -153,16 +170,16 @@
         </div>
 
         <div class="core-tab-panel"></div>
-    </div>       
+    </div>
 </body>
 
 <script>
-    require('./node_modules/devextreme/dist/js/dx.all.js');  
-        
-    window.onload = async (e) =>
-    {
+    require('./node_modules/devextreme/dist/js/dx.all.js');
+
+    window.onload = async (e) => {
         const MainRenderedWindow = require('./app/MainRenderedWindow.js');
         await (new MainRenderedWindow()).execute();
-    };    
+    };
 </script>
+
 </html>
