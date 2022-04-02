@@ -4,8 +4,8 @@ const fs = require('fs').promises,
   path = require('path'),
   log = require('electron-log');
 
-const MainBrowserWindow = require('./app/MainBrowserWindow.js');
-const AppTray = require('./app/AppTray.js');
+const MainBrowserWindow = require('./app/main-browser-window.js');
+const AppTray = require('./app/app-tray.js');
 
 process.env.NODE_ENV = 'production';
 

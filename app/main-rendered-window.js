@@ -7,7 +7,7 @@ const mem = osu.mem;
 const os = osu.os;
 require('datejs');
 
-const SparklineChart = require('./SparklineChart');
+const SparklineChart = require('./spark-line-chart');
 
 Number.prototype.toFixedNumber = function (digits, base) {
   var pow = Math.pow(base || 10, digits);
