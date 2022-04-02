@@ -19,7 +19,7 @@ class MainBrowserWindow extends BrowserWindow {
     });
 
     this.loadURL(path.join('file://', __dirname, '../index.html'));
-    this.webContents.openDevTools();
+    // this.webContents.openDevTools();
   }
 }
 

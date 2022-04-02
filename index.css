@@ -1,0 +1,75 @@
+body {
+  user-select: none;
+  overflow: hidden;
+}
+
+.core-flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.dx-button-text {
+  letter-spacing: 1px;
+}
+
+.dx-menu .dx-menu-item-has-icon.dx-menu-item-has-submenu .dx-icon {
+  margin: 0 5px 0 3px;
+}
+
+.dx-color-scheme-teal-dark [data-core-close-menu] .dx-state-hover,
+.dx-color-scheme-teal-light [data-core-close-menu] .dx-state-hover {
+  background-color: teal;
+  color: white;
+}
+
+.dx-color-scheme-orange-dark [data-core-close-menu] .dx-state-hover,
+.dx-color-scheme-orange-light [data-core-close-menu] .dx-state-hover {
+  background-color: orangered;
+  color: white;
+}
+
+.dx-tabpanel .dx-tab {
+  min-width: 150px;
+}
+
+.dx-tab-text {
+  display: flex;
+}
+
+.dx-tab-text i {
+  margin-right: 8px !important;
+}
+
+.core-tab-flex-row {
+  justify-content: flex-start;
+}
+
+[data-core-tabs] .dx-icon {
+  margin-right: 10px;
+}
+
+.core-tab-panel {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.core-window-draggable-title {
+  flex: 1;
+  -webkit-app-region: drag;
+  width: 100%;
+  align-self: center;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 16px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
+
+.core-progress-bar .dx-progressbar-container {
+  height: 25px;
+}
