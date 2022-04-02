@@ -1,5 +1,7 @@
 .vscode
 .idea
+compiled
 node_modules
 release-builds
 dist
+**.js

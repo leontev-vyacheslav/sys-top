@@ -5,16 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SysTop</title>
-    <link rel="stylesheet" type="text/css" href="./node_modules/devextreme/dist/css/dx.common.css" />
-    <link rel="dx-theme" data-theme="material.teal.dark"
-        href="./node_modules/devextreme/dist/css/dx.material.teal.dark.css" data-active="false" />
-    <link rel="dx-theme" data-theme="material.teal.light"
-        href="./node_modules/devextreme/dist/css/dx.material.teal.light.css" data-active="false" />
-    <link rel="dx-theme" data-theme="material.orange.dark"
-        href="./node_modules/devextreme/dist/css/dx.material.orange.dark.css" data-active="false" />
-    <link rel="dx-theme" data-theme="material.orange.light"
-        href="./node_modules/devextreme/dist/css/dx.material.orange.light.css" data-active="false" />
-    <link rel="stylesheet" href="index.css" />
+
+    <link rel="stylesheet" type="text/css" href="./node_modules/devextreme/dist/css/dx.common.css">
+    <link rel="dx-theme" data-theme="material.teal.dark" href="./node_modules/devextreme/dist/css/dx.material.teal.dark.css" data-active="true">
+    <link rel="dx-theme" data-theme="material.teal.light" href="./node_modules/devextreme/dist/css/dx.material.teal.light.css" data-active="false">
+    <link rel="dx-theme" data-theme="material.orange.dark" href="./node_modules/devextreme/dist/css/dx.material.orange.dark.css" data-active="false">
+    <link rel="dx-theme" data-theme="material.orange.light" href="./node_modules/devextreme/dist/css/dx.material.orange.light.css" data-active="false">
+
+    <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 
 <body class="dx-viewport">
@@ -86,7 +84,7 @@
     require('./node_modules/devextreme/dist/js/dx.all.js');
 
     window.onload = async (e) => {
-        const MainRenderedWindow = require('./app/main-rendered-window.js');
+        const { MainRenderedWindow } = require('./app/main-rendered-window.js');
         await (new MainRenderedWindow()).execute();
     };
 </script>
