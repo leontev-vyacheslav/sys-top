@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron');
+const { BrowserWindow } = require('electron');
 const path = require('path');
 
 class MainBrowserWindow extends BrowserWindow {
@@ -12,6 +12,7 @@ class MainBrowserWindow extends BrowserWindow {
       frame: false,
       webPreferences: {
         nodeIntegration: true,
+        nodeIntegrationInWorker: true,
         contextIsolation: false,
         enableRemoteModule: true,
       },

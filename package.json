@@ -18,7 +18,7 @@
     "main": "main.js",
     "icon": "./assets/icons/win/icon.ico",
     "scripts": {
-        "dev": "nodemon --exec electron .",
+        "dev": "electron .",
         "builder-dist": "electron-builder",
         "packager-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
         "packager-win": "electron-packager . sys-top --overwrite --platform=win32 --arch=x64 --icon=assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"SysTop App\"",
@@ -28,10 +28,10 @@
         "electron": "^18.0.1",
         "electron-builder": "^22.14.13",
         "electron-packager": "^15.4.0",
-        "nodemon": "^2.0.15"
+        "nodemon": "^2.0.15",
+        "typescript": "^4.6.3"
     },
     "dependencies": {
-        "@electron/remote": "^2.0.8",
         "datejs": "^1.0.0-rc3",
         "devextreme": "^21.2.6",
         "electron-log": "^4.4.6",

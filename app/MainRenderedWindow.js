@@ -82,7 +82,7 @@ class MainRenderedWindow {
               text: 'Quit',
               icon: 'export',
               onClick: () => {
-                app.quit()
+                ipcRenderer.invoke('app:quit');
               },
             },
           ],
@@ -94,7 +94,7 @@ class MainRenderedWindow {
         {
           icon: 'close',
           onClick: () => {
-            getCurrentWindow().hide();
+            ipcRenderer.invoke('mainWindow:hide');
           },
         },
       ],
@@ -291,7 +291,7 @@ class MainRenderedWindow {
             text: 'Save',
             width: '100%',
             onClick: () => {
-              ipcRenderer.send('settings:save', this.#settings);
+              ipcRenderer.invoke('settings:save', this.#settings);
             },
           },
         },
@@ -304,7 +304,7 @@ class MainRenderedWindow {
       this.#settings = data;
     });
 
-    ipcRenderer.send('settings:request');
+    ipcRenderer.invoke('settings:request');
 
     this.#buildMenu();
     this.#buildTabPanel();
